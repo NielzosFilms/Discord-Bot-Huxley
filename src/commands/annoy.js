@@ -1,4 +1,4 @@
-const {bot, prefix, bot_id} = require("../huxley");
+const {bot, prefix, bot_id, memory_file} = require("../huxley");
 const Discord = require("discord.js");
 const fs = require("fs");
 
@@ -18,6 +18,13 @@ const toWeirdCase = (a) =>
 	).join` `;
 
 bot.on("message", async (msg) => {
+	if (msg.content.startsWith(prefix)) return;
+	if (fs.existsSync(memory_file)) {
+		const jsondata = fs.readFileSync(memory_file);
+		memory = JSON.parse(jsondata);
+		if (memory["global-mute"] === true) return;
+		if (memory.mutes.includes(msg.author.id)) return;
+	}
 	if (
 		msg.author.bot ||
 		!msg.content ||

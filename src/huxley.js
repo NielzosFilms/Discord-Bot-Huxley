@@ -8,6 +8,7 @@ const MODULES = ["commands"];
 
 const prefix = "?";
 const bot_id = "891614684912967730";
+const memory_file = "memory.json";
 
 const databaseConfig = {
 	host: process.env.DB_HOST,
@@ -48,4 +49,5 @@ bot.on("ready", () => {
 module.exports.bot = bot;
 module.exports.prefix = prefix;
 module.exports.bot_id = bot_id;
+module.exports.memory_file = memory_file;
 module.exports.databaseConfig = databaseConfig;

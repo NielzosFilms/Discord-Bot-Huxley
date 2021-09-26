@@ -78,6 +78,14 @@ bot.on("message", async (msg) => {
 					{
 						name: `${prefix}rock-paper-scissors <rock,paper,scissors>`,
 						value: "Play rock paper scissors with Huxley",
+					},
+					{
+						name: `${prefix}mute-for-me`,
+						value: "This will toggle mute the annoying messages just for you.",
+					},
+					{
+						name: `${prefix}global-mute`,
+						value: "This will toggle mute the annoying messages for everyone.",
 					}
 				)
 		);
