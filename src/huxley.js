@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 const MODULES = ["commands"];
 
-const prefix = ".";
+const prefix = "?";
 
 const databaseConfig = {
 	host: process.env.DB_HOST,
