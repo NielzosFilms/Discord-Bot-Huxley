@@ -7,6 +7,7 @@ const bot = new Discord.Client();
 const MODULES = ["commands"];
 
 const prefix = "?";
+const bot_id = "891614684912967730";
 
 const databaseConfig = {
 	host: process.env.DB_HOST,
@@ -46,4 +47,5 @@ bot.on("ready", () => {
 
 module.exports.bot = bot;
 module.exports.prefix = prefix;
+module.exports.bot_id = bot_id;
 module.exports.databaseConfig = databaseConfig;

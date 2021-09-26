@@ -74,6 +74,10 @@ bot.on("message", async (msg) => {
 					{
 						name: `${prefix}ping`,
 						value: "Ping the bot (shows delay in miliseconds)",
+					},
+					{
+						name: `${prefix}rock-paper-scissors <rock,paper,scissors>`,
+						value: "Play rock paper scissors with Huxley",
 					}
 				)
 		);
