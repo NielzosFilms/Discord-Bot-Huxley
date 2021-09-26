@@ -23,7 +23,7 @@ bot.on("ready", () => {
 	bot.user.setPresence({
 		activity:
 			process.env.NODE_ENV === "production"
-				? {name: `"${prefix}help" for commands`}
+				? {name: `Doing God's Work "${prefix}help"`}
 				: {name: `UNDER CONSTRUCTION`},
 		status: "online",
 	});
